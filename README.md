@@ -44,7 +44,7 @@ jupyter notebook chest-class_app.ipynb
 ```
 
 ## License
-This project coding is released under the [MIT](https://github.com/IloBe/).
+This project coding is released under the [MIT](https://github.com/IloBe/CNN_Thorax-Pneumonia_Classifier/blob/master/LICENSE).
 
 
 
