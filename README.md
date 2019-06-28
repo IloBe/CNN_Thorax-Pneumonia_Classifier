@@ -43,8 +43,11 @@ python -m ipykernel install --user --name chest-class-project --display-name "ch
 jupyter notebook chest-class_app.ipynb
 ```
 
+5. (Optional) **If you are running the project on your local machine (and not using AWS)**, before running code, change the kernel to match the chest-class-project environment by using the drop-down menu (**Kernel > Change kernel > chest-class-project**). Then, follow the instructions in the notebook.
+
+
 ## License
-This project coding is released under the [MIT](https://github.com/IloBe/CNN_Thorax-Pneumonia_Classifier/blob/master/LICENSE).
+This project coding is released under the [MIT](https://github.com/IloBe/CNN_Thorax-Pneumonia_Classifier/blob/master/LICENSE) license.
 
 
 
