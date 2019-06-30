@@ -1,14 +1,15 @@
 [//]: # (Image References)
 
-[image1]: ./images/IM-0115-0001_sample_input.jpeg "Sample input"
-[image2]: ./images/AP_PA_orientation.PNG "Orientation"
+[image1]: ./images/IM-0115-0001_sample_input.jpeg "Normal chest image:"
+[image2]: ./images/pneumonia_lung_example_small.PNG "Pneumonia chest image:"
+[image3]: ./images/AP_PA_orientation_small.PNG "Orientation"
 
 # Thorax-Pneumonia Classifier Project
 
 ## Project Overview
 Welcome to this **Deep Learning** project: Chest X-ray images are classified being normal or pneumonia ones by using Convolutional Neural Networks. Means, given a converted .jpeg compressed image of a chest X-ray [DICOM](https://www.dicomstandard.org/) image, the algorithm will identify an estimate of the image status showing a pneumonia or not. 
 
-![Sample input][image1]
+![Normal chest image:][image1]		![Pneumonia chest image:][image2]
 
 The international _Digital Imaging and Communications in Medicine_ standard, DICOM standard for short, delivers the processes and interfaces to transmit, store, retrieve, print, process, and display medical imaging information between relevant modality components of an hospital information system.
 
@@ -16,11 +17,13 @@ The used [Kaggle dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pn
 
 After viewing such images it has been identified, that only posterior-anterior image orientation is available and that mostly children images are selected. No anterior-posterior or lateral orientation has been found. This could only be analysed more properly by reconverting the images to the .dcm DICOM format having the associated DICOM tags available. Doing this, regulatory data protection aspects have to be taken into account (e.g. Health Insurance Portability and Accountability Act, [HIPAA](https://hipaa.com/)), therefore this has not been done. It would be a HIPAA compliance breach.
 
-![Orientation][image2]
+![Orientation][image3]
+
+## Project Proposal Documentation
+As a first introduction to the projects way of working and implementation, read this [documentation](https://github.com/IloBe/CNN_Thorax-Pneumonia_Classifier/blob/master/CapstoneProposal_chest-pneumonia-classifier.pdf).
 
 
 ## Project Instructions
-
 ### Instructions
 
 1. Download the [chest image dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia/version/2). Unzip the folder and place the delivered 'chest_xray' directory in your repository, at location `path/to/chest-classifier-project/data`.
