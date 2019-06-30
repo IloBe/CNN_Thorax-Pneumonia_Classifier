@@ -1,6 +1,6 @@
 [//]: # (Image References)
 
-[image1]: ./images/IM-0115-0001_sample_input.jpeg "Normal chest image:"
+[image1]: ./images/normal_lung_example.PNG "Normal chest image:"
 [image2]: ./images/pneumonia_lung_example_small.PNG "Pneumonia chest image:"
 [image3]: ./images/AP_PA_orientation_small.PNG "Orientation"
 
@@ -9,7 +9,7 @@
 ## Project Overview
 Welcome to this **Deep Learning** project: Chest X-ray images are classified being normal or pneumonia ones by using Convolutional Neural Networks. Means, given a converted .jpeg compressed image of a chest X-ray [DICOM](https://www.dicomstandard.org/) image, the algorithm will identify an estimate of the image status showing a pneumonia or not. 
 
-![Normal chest image:][image1]		![Pneumonia chest image:][image2]
+![Normal chest image:][image1] ![Pneumonia chest image:][image2]
 
 The international _Digital Imaging and Communications in Medicine_ standard, DICOM standard for short, delivers the processes and interfaces to transmit, store, retrieve, print, process, and display medical imaging information between relevant modality components of an hospital information system.
 
