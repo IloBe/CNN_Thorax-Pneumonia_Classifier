@@ -26,7 +26,8 @@ As a first introduction to the projects way of working and implementation, read 
 
 ## Project Instructions
 
-1. Download the [chest image dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia/version/2). Unzip the folder and place the delivered 'chest_xray' directory in your repository, at location `path/to/chest-classifier-project/data`.
+1. Download the [chest image dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia/version/2). Unzip the folder and place the delivered 'chest_xray' directory in your repository, at location `path/to/chest-classifier-project/data`.<br>
+Have a look to the new directories and delete the '.DS_store' files, they are not needed for this algorithm and would throw errors by using this coding.
 
 2. **If you are running the project on your local machine (and not using AWS)** create and activate a new environment. First, move to directory `path/to/chest-classifier-project`.
   - __Windows__
