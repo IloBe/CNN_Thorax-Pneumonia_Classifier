@@ -28,7 +28,7 @@ As a first introduction to the projects way of working and implementation, read 
 
 1. Download the [chest image dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia/version/2). Unzip the folder and place the delivered 'chest_xray' directory in your repository, at location `path/to/chest-classifier-project/data`.
 
-2. **If you are running the project on your local machine (and not using AWS)** create and activate a new environment.
+2. **If you are running the project on your local machine (and not using AWS)** create and activate a new environment. First, move to directory `path/to/chest-classifier-project`.
   - __Windows__
   ```
 	conda create --name chest-class-project python=3.6
@@ -46,7 +46,7 @@ python -m ipykernel install --user --name chest-class-project --display-name "ch
 jupyter notebook chest-class_app.ipynb
 ```
 
-5. (Optional) **If you are running the project on your local machine (and not using AWS)**, before running code, change the kernel to match the chest-class-project environment by using the drop-down menu (**Kernel > Change kernel > chest-class-project**). Then, follow the instructions in the notebook.
+5. **If you are running the project on your local machine (and not using AWS)**, before running code, change the kernel to match the chest-class-project environment by using the drop-down menu (**Kernel > Change kernel > chest-class-project**).
 
 
 ## License
