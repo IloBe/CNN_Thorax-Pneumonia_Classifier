@@ -1,4 +1,6 @@
-from models.Batch_CNN_Model import Batch_CNN_Model
+from models.Batch_Model import Batch_Model
+from models.Basic_CNN_Model import Basic_CNN_Model
+from models.Improved_CNN_Model import Improved_CNN_Model
 
 class Model:
     """ Model factory class for deep learning network types. """
@@ -13,21 +15,24 @@ class Model:
         - metric: metric type depends on the task and the used optimiser,
           e.g. for classifiction the simplest one is 'accuracy'
         '''
+        self.model_class = None
         self.model = None
         self.name = name
         self.metric = metric
         self.type_name = type_name
         
-        if type_name in ["Basic"]:
-            self.model = network1(name=name, metric=metric)
+        if self.type_name in ["Basic"]:
+            self.model_class = Basic_CNN_Model(name=name, metric=metric)
         elif type_name in ["Batch"]: 
-            self.model = Batch_CNN_Model(name=name, metric=metric)
+            self.model_class = Batch_Model(name=name, metric=metric)
+        elif type_name in ["Improved"]:
+            self.model_class = Improved_CNN_Model(name=name, metric=metric)
         else:
             print("Wrong Model type - {} -, does not exist, therefore no model building possible.".format(type_name))
 
             
     def get_model(self):
         # Can return None, if model type does not exist yet.
+        self.model = self.model_class.get_model()
         return self.model
     
-           
