@@ -26,7 +26,7 @@ As a first introduction to the projects way of working and implementation, read 
 
 ## Project Instructions
 
-0. Download GraphViz and on Windows install it to 'C:/Program Files (x86)/Graphviz2.38/bin/'. Afterwards add this directory to the PATH environment variable.
+0. Download GraphViz and on Windows install it to 'C:/Program Files (x86)/Graphviz2.38/'. Afterwards add the 'C:/Program Files (x86)/Graphviz2.38/bin/' directory to the PATH environment variable.
 
 1. Download the [chest image dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia/version/2). Unzip the folder and place the delivered 'chest_xray' directory in your repository, at location `path/to/chest-classifier-project/data`.<br>
 Have a look to the new directories and delete the '.DS_store' files, they are not needed for this algorithm and would throw errors by using this coding.
