@@ -36,3 +36,7 @@ class Model:
         self.model = self.model_class.get_model()
         return self.model
     
+    def get_class(self):
+        # Can return None, if model type does not exist yet.
+        return self.model_class
+    
