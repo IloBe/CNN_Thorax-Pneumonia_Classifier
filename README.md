@@ -26,10 +26,14 @@ As a first introduction to the projects way of working and implementation, read 
 
 ## Project Instructions
 
-0. Download GraphViz and on Windows install it to 'C:/Program Files (x86)/Graphviz2.38/'. Afterwards add the 'C:/Program Files (x86)/Graphviz2.38/bin/' directory to the PATH environment variable.
+0. Download GraphViz and on Windows install it to 'C:/Program Files (x86)/Graphviz2.38/'. Afterwards add the 'C:/Program Files (x86)/Graphviz2.38/bin/' directory to the _PATH_ environment variable. This path information is part of the 'step 0' chapter of the python project file too. So, don't change it.
+
+Pydot and GraphViz are used together to plot the neural network architecture. [GraphViz](https://www.graphviz.org/) is now licensed on an open source basis, only under The Common Public License.
 
 1. Download the [chest image dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia/version/2). Unzip the folder and place the delivered 'chest_xray' directory in your repository, at location `path/to/chest-classifier-project/data`.<br>
 Have a look to the new directories and delete the '.DS_store' files, they are not needed for this algorithm and would throw errors by using this coding.
+
+Using the original chest X-ray image separations to the directories train, test, val and their associated subdirectories caused the neural network to unreliable results. Its distribution does not fit to the 80/20 or 70/30 rule of thumb according training and testing data. This original distribution has been changed to a 80/20 set and further information is mentioned in the _chest-class_app.ipynb_ file. 
 
 2. **If you are running the project on your local machine (and not using AWS)** create and activate a new environment. First, move to directory `path/to/chest-classifier-project`.
   - __Windows__
