@@ -66,14 +66,19 @@ class Basic_CNN_Model:
         return history
     
     
-    def augmentation_train_model(self, model, filepath, training_data, validation_data, epochs, train_tensors, batch_size):
-        checkpointer = ModelCheckpoint(filepath=filepath, verbose=2, save_best_only=True)
+    def augmentation_train_model(self, model, filepath, training_data, validation_data, epochs, batch_size,
+                                 train_tensors, valid_tensors):
+        checkpointer = ModelCheckpoint(filepath=filepath, verbose=2, save_best_only=True)       
         
+        # with original dataset: validation_steps = 0.5  (16 / 32 = 0.5)
+        # but with modified dataset it is 1 (32/32) => we use: valid_tensors.shape[0]//batch_size
         # example: train on 5216 samples and batch_size=32 => 5216/32 = 163 as steps_per_epoch
-        base_model_aug_history = model.fit_generator(training_data,
-                                 validation_data=validation_data, validation_steps=0.5,
-                                 epochs=epochs, steps_per_epoch=train_tensors.shape[0]//batch_size,
-                                 callbacks=[checkpointer], verbose=2)
+        base_model_aug_history = model.fit_generator(generator=training_data,
+                                                     steps_per_epoch=train_tensors.shape[0]//batch_size,
+                                                     epochs=epochs, verbose=2,
+                                                     callbacks=[checkpointer],
+                                                     validation_data=validation_data,
+                                                     validation_steps=valid_tensors.shape[0]//batch_size)
         self.model = model
         
         return base_model_aug_history
