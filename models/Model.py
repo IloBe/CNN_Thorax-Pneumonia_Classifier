@@ -1,4 +1,4 @@
-from models.Batch_Model import Batch_Model
+from models.Batch_CNN_Model import Batch_CNN_Model
 from models.Basic_CNN_Model import Basic_CNN_Model
 from models.Improved_CNN_Model import Improved_CNN_Model
 
@@ -24,7 +24,7 @@ class Model:
         if self.type_name in ["Basic"]:
             self.model_class = Basic_CNN_Model(name=name, metric=metric)
         elif type_name in ["Batch"]: 
-            self.model_class = Batch_Model(name=name, metric=metric)
+            self.model_class = Batch_CNN_Model(name=name, metric=metric)
         elif type_name in ["Improved"]:
             self.model_class = Improved_CNN_Model(name=name, metric=metric)
         else:
