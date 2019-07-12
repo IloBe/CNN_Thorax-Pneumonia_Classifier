@@ -29,7 +29,7 @@ class Model:
         elif type_name in ["Improved"]:
             self.model_class = Improved_CNN_Model(name=name, metric=metric)
         elif type_name in ["Transfer"]:
-            self.model_class = Transfer_CNN_Model(name=name, metric=metric, train_inceptV3)
+            self.model_class = Transfer_CNN_Model(name=name, metric=metric, train_inceptV3=train_inceptV3)
         else:
             print("Wrong Model type - {} -, does not exist, therefore no model building possible.".format(type_name))
 
