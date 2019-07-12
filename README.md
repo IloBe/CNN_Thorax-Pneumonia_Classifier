@@ -15,7 +15,7 @@ The international _Digital Imaging and Communications in Medicine_ standard, DIC
 
 The used [Kaggle dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia/version/2) delivers already labelled images as training, testing and validation samples. As mentioned, these images are already converted to the .jpeg image format, so, private individual data information sets don't exist.
 
-After viewing such images it has been identified, that only posterior-anterior image orientation is available and that mostly children images are selected. No anterior-posterior or lateral orientation has been found. This could only be analysed more properly by reconverting the images to the .dcm DICOM format having the associated DICOM tags available. Doing this, regulatory data protection aspects have to be taken into account (e.g. Health Insurance Portability and Accountability Act, [HIPAA](https://hipaa.com/)), therefore this has not been done. It would be a HIPAA compliance breach.
+After viewing such images it has been identified, that posterior-anterior or anterior-posterior X-ray image orientation is available and that mostly children images are selected. No X-ray images of all human age categories and X-ray lateral orientation have been found. But this could only be analysed more properly by reconverting the images to the .dcm DICOM format having the associated DICOM tags available. Doing this, regulatory data protection aspects have to be taken into account (e.g. Health Insurance Portability and Accountability Act, [HIPAA](https://hipaa.com/)), therefore this has not been done. It would be a HIPAA compliance breach.
 
 ![Orientation][image2]
 [Image source](https://www.youtube.com/watch?v=HNGNQMhsxx4)
@@ -31,9 +31,11 @@ As a first introduction to the projects way of working and implementation, read 
 Pydot and GraphViz are used together to plot the neural network architecture. [GraphViz](https://www.graphviz.org/) is now licensed on an open source basis, only under The Common Public License.
 
 1. Download the [chest image dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia/version/2). Unzip the folder and place the delivered 'chest_xray' directory in your repository, at location `path/to/chest-classifier-project/data`.<br>
-Have a look to the new directories and delete the '.DS_store' files, they are not needed for this algorithm and would throw errors by using this coding.
+Have a look to the new directories and delete all the '.DS_store' files, they are not needed for this algorithm and would throw errors by using this coding.
 
 Using the original chest X-ray image separations to the directories train, test, val and their associated subdirectories caused the neural network to unreliable results. Its distribution does not fit to the 80/20 or 70/30 rule of thumb according training and testing data. This original distribution has been changed to a 80/20 set and further information is mentioned in the _chest-class_app.ipynb_ file. 
+
+Some of the best weights training results are stored in the _saved_models_ directory, where are CNN architecture .png files are stored as well.
 
 2. **If you are running the project on your local machine (and not using AWS)** create and activate a new environment. First, move to directory `path/to/chest-classifier-project`.
   - __Windows__
