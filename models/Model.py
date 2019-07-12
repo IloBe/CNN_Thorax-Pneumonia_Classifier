@@ -1,6 +1,7 @@
 from models.Batch_CNN_Model import Batch_CNN_Model
 from models.Basic_CNN_Model import Basic_CNN_Model
 from models.Improved_CNN_Model import Improved_CNN_Model
+from models.Transfer_CNN_Model import Transfer_CNN_Model
 
 class Model:
     """ Model factory class for deep learning network types. """
@@ -27,6 +28,8 @@ class Model:
             self.model_class = Batch_CNN_Model(name=name, metric=metric)
         elif type_name in ["Improved"]:
             self.model_class = Improved_CNN_Model(name=name, metric=metric)
+        elif type_name in ["Transfer"]:
+            self.model_class = Transfer_CNN_Model(name=name, metric=metric, train_inceptV3)
         else:
             print("Wrong Model type - {} -, does not exist, therefore no model building possible.".format(type_name))
 
