@@ -1,7 +1,8 @@
 from models.Batch_CNN_Model import Batch_CNN_Model
 from models.Basic_CNN_Model import Basic_CNN_Model
 from models.Improved_CNN_Model import Improved_CNN_Model
-from models.Transfer_CNN_Model import Transfer_CNN_Model
+from models.Transfer_ResNet_CNN_Model import Transfer_ResNet_CNN_Model
+from models.Transfer_InceptionV3_CNN_Model import Transfer_InceptionV3_CNN_Model
 
 class Model:
     """ Model factory class for deep learning network types. """
