@@ -71,6 +71,12 @@ class Basic_CNN_Model:
         checkpointer = ModelCheckpoint(filepath=filepath, verbose=2, save_best_only=True)       
         
         # with original dataset: validation_steps = 0.5  (16 / 32 = 0.5)
+        validation_steps = 0.5
+        
+        # my own other datasets are created having more validation data than 32, so they are >=1  
+        if (valid_tensors.shape[0]//batch_size) >= 1:
+            validation_steps=valid_tensors.shape[0]//batch_size             
+        
         # but with modified dataset it is 1 (32/32) => we use: valid_tensors.shape[0]//batch_size
         # example: train on 5216 samples and batch_size=32 => 5216/32 = 163 as steps_per_epoch
         base_model_aug_history = model.fit_generator(generator=training_data,
@@ -78,7 +84,7 @@ class Basic_CNN_Model:
                                                      epochs=epochs, verbose=2,
                                                      callbacks=[checkpointer],
                                                      validation_data=validation_data,
-                                                     validation_steps=valid_tensors.shape[0]//batch_size)
+                                                     validation_steps=validation_steps)
         self.model = model
         
         return base_model_aug_history
