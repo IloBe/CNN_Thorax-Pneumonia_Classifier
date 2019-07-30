@@ -92,15 +92,23 @@ class Improved_CNN_Model:
 
     def augmentation_train_model(self, model, filepath, training_data, validation_data, epochs, batch_size,
                                 train_tensors, valid_tensors):
+        checkpointer = ModelCheckpoint(filepath=filepath, verbose=2, save_best_only=True) 
+        
         # with original dataset: validation_steps = 0.5  (16 / 32 = 0.5)
-        # but with modified dataset it is 1 (32/32) => we use: valid_tensors.shape[0]//batch_size
-        checkpointer = ModelCheckpoint(filepath=filepath, verbose=2, save_best_only=True)       
+        validation_steps = 0.5
+        
+        # my own other datasets are created having more validation data than 32, so they are >=1
+        # e.g. with one modified dataset it is 1 (32/32) => we use: valid_tensors.shape[0]//batch_size
+        # and to train on 5216 samples and batch_size=32 => 5216/32 = 163 as steps_per_epoch
+        if (valid_tensors.shape[0]//batch_size) >= 1:
+            validation_steps=valid_tensors.shape[0]//batch_size             
+        
         improved_model_aug_history = model.fit_generator(generator=training_data,
                                                          steps_per_epoch=train_tensors.shape[0]//batch_size,
                                                          epochs=epochs, verbose=2,
                                                          callbacks=[checkpointer],
                                                          validation_data=validation_data,
-                                                         validation_steps=valid_tensors.shape[0]//batch_size)
+                                                         validation_steps=validation_steps)
         self.model = model
         
         return improved_model_aug_history
