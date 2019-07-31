@@ -37,7 +37,7 @@ Using the original chest X-ray image separations to the directories train, test,
 
 Some of the best weights training results are stored in the _saved_models_ directory, where are CNN architecture .png files are stored as well.
 
-Regarding the bottleneck features for the transfer learning models, only the npz file of the ResNet50 could be stored in this repository as a zip file. It can be downloaded and unpacked in a subdirectory called _bottleneck_features_. The one created for the InceptionV3 model is too big for GitHub.
+Regarding the bottleneck features for the transfer learning models, only the npz files of the ResNet50 from the different data distributions could be stored in this repository as a zip file. They can be downloaded and unpacked in a subdirectory called _bottleneck_features_. The ones created for the InceptionV3 models are too big for the GitHub repository.
 
 2. **If you are running the project on your local machine (and not using AWS)** create and activate a new environment. First, move to directory `path/to/chest-classifier-project`.
   - __Windows__
