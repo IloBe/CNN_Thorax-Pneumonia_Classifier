@@ -15,12 +15,11 @@ class Evaluation_Class:
     '''
     
     
-    def get_test_accuracy(model_name, predictions, test_targets):
+    def print_test_accuracy(model_name, predictions, test_targets):
         # report test accuracy
         test_accuracy = 100 * np.sum(np.array(predictions) == np.argmax(test_targets, axis=1))/ \
                                                                         len(predictions)
-        print('{}: Test Accuracy: {.3f}'.format(model_name, test_accuracy))
-        return test_accuracy
+        print('{}: Test Accuracy: {:3.2f}'.format(model_name, test_accuracy))
     
     
     def show_history_accuracy(history):
