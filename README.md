@@ -39,6 +39,8 @@ Some of the best weights training results are stored in the _saved_models_ direc
 
 Regarding the bottleneck features for the transfer learning models, only the npz files of the ResNet50 from the different data distributions could be stored in this repository as a zip file. They can be downloaded and unpacked in a subdirectory called _bottleneck_features_. The ones created for the InceptionV3 models are too big for the GitHub repository.
 
+As a future to do: Better hyperparameter values (batch and epoch sizes together with the initialisation) must be found by having a better environment for machine learning algorithms. Hyperparameter tuning from Scikit-Learn with GridSearchCV or RandomizedCV as an alternative has not been done, because it is computational expensive having such a lot of parameters for the neural network architectures. It was not possible with the existing environment (own hardware or AWS EC2 service).
+
 2. **If you are running the project on your local machine (and not using AWS)** create and activate a new environment. First, move to directory `path/to/chest-classifier-project`.
   - __Windows__
   ```
