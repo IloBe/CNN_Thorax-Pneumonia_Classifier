@@ -20,8 +20,8 @@ After viewing such images it has been identified, that posterior-anterior or ant
 ![Orientation][image2]
 [Image source](https://www.youtube.com/watch?v=HNGNQMhsxx4)
 
-## Project Proposal Documentation
-As a first introduction to the projects way of working and implementation, read this [documentation](https://github.com/IloBe/CNN_Thorax-Pneumonia_Classifier/blob/master/CapstoneProposal_chest-pneumonia-classifier.pdf).
+## Project Report Documentation
+As a first introduction to the projects way of working and implementation, read this report [documentation](https://github.com/IloBe/CNN_Thorax-Pneumonia_Classifier/blob/master/ML2_CapstoneReport_CNN-Thorax-Pneumonia-Classifier.pdf).
 
 
 ## Project Instructions
