@@ -20,8 +20,10 @@ After viewing such images it has been identified, that posterior-anterior or ant
 ![Orientation][image2]
 [Image source](https://www.youtube.com/watch?v=HNGNQMhsxx4)
 
-## Project Report Documentation
-As a first introduction to the projects way of working and implementation, read this report [documentation](https://github.com/IloBe/CNN_Thorax-Pneumonia_Classifier/blob/master/ML2_CapstoneReport_CNN-Thorax-Pneumonia-Classifier.pdf).
+## Project Documentation
+As an introduction to the projects way of working and implementation, read this report [documentation](https://github.com/IloBe/CNN_Thorax-Pneumonia_Classifier/blob/master/ML2_CapstoneReport_CNN-Thorax-Pneumonia-Classifier.pdf).
+
+More general, this project is linked as example part to the Medium blog post ['AI in Healthcare Not Only Changing Doctors Diagnostic Workflow'](https://medium.com/@ilona.brinkmeier/ai-in-healthcare-not-only-changing-doctors-diagnostic-workflow-fd36778130e5).
 
 
 ## Project Instructions
@@ -33,7 +35,7 @@ Pydot and GraphViz are used together to plot the neural network architecture. [G
 1. Download the [chest image dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia/version/2). Unzip the folder and place the delivered 'chest_xray' directory in your repository, at location `path/to/chest-classifier-project/data`.<br>
 Have a look to the new directories and delete all the '.DS_store' files, they are not needed for this algorithm and would throw errors by using this coding.
 
-Using the original chest X-ray image separations to the directories train, test, val and their associated subdirectories caused the neural network to unreliable results. Its distribution does not fit to the 80/20 or 70/30 rule of thumb according training and testing data. This original distribution has been changed to other ratios, like e.g. 80/20 set (60/20/20 distribution for training/validation/testing) and further information is mentioned in the _chest-class_app.ipynb_ file. Playing around with different distributions -  especially the amount of validation samples - showed big changes in the prediction metric results. Having a look to some model architectures, their prediction performance isn't good anymore, e.g. having a ROC AUC even worse than random prediction. Bias and over-fitting appeared in some cases. So, for the final project different python notebook files are stored, each one using a different data distribution. The associated ratio is part of the file name.
+Using the original chest X-ray image separations to the directories train, test, val and their associated subdirectories caused the neural network to unreliable results. Its distribution does not fit to the 80/20 or 70/30 rule of thumb according training and testing data. This original distribution has been changed to other ratios, like e.g. 80/20 set (60/20/20 distribution for training/validation/testing) and further information is mentioned in the _chest-class_app.ipynb_ file. Playing around with different distributions -  especially the amount of validation samples - showed big changes in the prediction metric results. Having a look to some model architectures, their prediction performance isn't good anymore, e.g. having a ROC AUC even worse than random prediction. Bias and overfitting appeared in some cases. So, for the final project different python notebook files are stored, each one using a different data distribution. The associated ratio is part of the file name.
 
 Some of the best weights training results are stored in the _saved_models_ directory, where are CNN architecture .png files are stored as well.
 
