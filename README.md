@@ -13,7 +13,7 @@ Welcome to this **Deep Learning** project: Chest X-ray images are classified bei
 
 The international _Digital Imaging and Communications in Medicine_ standard, DICOM standard for short, delivers the processes and interfaces to transmit, store, retrieve, print, process, and display medical imaging information between relevant modality components of an hospital information system.
 
-The used [Kaggle dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia/version/2) delivers already labelled images as training, testing and validation samples. As mentioned, these images are already converted to the .jpeg image format, so, private individual data information sets don't exist.
+The used [Kaggle dataset](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia/version/2) delivers already labelled images as training, validation and testing samples. As mentioned, these images are already converted to the .jpeg image format. In other words, private individual data information sets don't exist.
 
 After viewing such images it has been identified, that posterior-anterior or anterior-posterior X-ray image orientation is available and that mostly children images are selected. No X-ray images of all human age categories and X-ray lateral orientation have been found. But this could only be analysed more properly by reconverting the images to the .dcm DICOM format having the associated DICOM tags available. Doing this, regulatory data protection aspects have to be taken into account (e.g. Health Insurance Portability and Accountability Act, [HIPAA](https://hipaa.com/)), therefore this has not been done. It would be a HIPAA compliance breach.
 
